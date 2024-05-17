@@ -24,10 +24,14 @@ def revertir(string):
     
 
 def sumarDigitos(num):
-
-    pass
+    if num < 10:
+        return num
+    
+    return num % 10 + sumarDigitos(num // 10)
 
 
 string = input("Enter string: ")
+num = int(input("Enter num: "))
 print(palindromo(string)) 
 print(revertir(string)) 
+print(sumarDigitos(num)) 
